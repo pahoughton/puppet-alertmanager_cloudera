@@ -1,0 +1,18 @@
+# 2019-01-06 (cc) <paul4hough@gmail.com>
+#
+---
+alertmanager_cloudera::version: 0.1.2
+alertmanager_cloudera::config_dir: /etc
+alertmanager_cloudera::config_file: >-
+  %{lookup('alertmanager_cloudera::config_dir')}/alertmanager-cloudera.yml
+alertmanager_cloudera::config_mode: "0664"
+alertmanager_cloudera::download_url: ~
+alertmanager_cloudera::download_url_base: >-
+  https://github.com/pahoughton/alertmanager-cloudera/releases/download
+alertmanager_cloudera::download_extension: tar.gz
+alertmanager_cloudera::bin_dir: /usr/local/bin
+alertmanager_cloudera::config:
+  global:
+    labels:
+      alertname: cloudera-script
+      no_resolve: "true"

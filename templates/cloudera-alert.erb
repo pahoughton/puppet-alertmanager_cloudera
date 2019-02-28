@@ -1,0 +1,5 @@
+#!/bin/bash
+# 2019-02-26 (cc) <paul4hough@gmail.com>
+#
+
+<%= scope.lookupvar('alertmanager_cloudera::bin_dir') %>/alertmanager-cloudera --config <%= scope.lookupvar('alertmanager_cloudera::config_file') %> $1
