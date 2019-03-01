@@ -14,7 +14,7 @@ class alertmanager_cloudera (
 
   $real_download_url = pick(
     $download_url,
-    "${download_url_base}/v${version}/alertmanager_cloudera-${version}.amd64.${download_extension}")
+    "${download_url_base}/v${version}/alertmanager-cloudera-${version}.amd64.${download_extension}")
 
   contain alertmanager_cloudera::install
   contain alertmanager_cloudera::config
